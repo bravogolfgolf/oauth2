@@ -31,8 +31,8 @@
 <script type="text/javascript">
     $.get("/user", function(data) {
         $("#user").html(data.userAuthentication.details.name);
-        $(".unauthenticated").hide()
-        $(".authenticated").show()
+        $(".unauthenticated").hide();
+        $(".authenticated").show();
     });
 
     var logout = function() {
@@ -40,9 +40,9 @@
             $("#user").html('');
             $(".unauthenticated").show();
             $(".authenticated").hide();
-        })
+        });
         return true;
-    }
+    };
 
     $.ajaxSetup({
         beforeSend : function(xhr, settings) {
